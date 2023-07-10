@@ -1,7 +1,13 @@
-const Button = (props) => {
+const Button = ({title, text, isDisabled, onClick, children}) => {
 
   return (
-    <button title={props.title}>{props.text}</button>
+    <button
+      onClick={onClick}
+      title={ title }
+      disabled={ isDisabled }
+    >
+      { text } { children }
+    </button>
   )
 }
 
