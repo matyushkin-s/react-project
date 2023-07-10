@@ -6,9 +6,13 @@ function App() {
   return (
     <div className="App">
       <h1>Hello world!</h1>
-      <Input />
+      <Input
+        placeholder="Write something here..."
+      />
       <br></br>
-      <Button text="Click 1" />
+      <Button title="Click" text="Click 1" />
+
+      <Button title="Test title" text="Click " />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 const Button = (props) => {
 
   return (
-    <button>{props.text}</button>
+    <button title={props.title}>{props.text}</button>
   )
 }
 
