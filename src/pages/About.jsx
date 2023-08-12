@@ -2,7 +2,10 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className='add-margin'>
+      <h1>About Us page</h1>
+      <p>Some contacts might be below...</p>
+    </div>
   )
 }
 
