@@ -1,19 +1,29 @@
-import React, { useState } from 'react'
+import { Route, Routes } from "react-router-dom";
 import './App.css';
-import List from './components/List';
-import Box from './components/Box';
+import Articles from './pages/Articles';
+import Home from './pages/Home';
+import About from "./pages/About";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
-  const [isShow, setIsShow] = useState(true);
+  // const [isShow, setIsShow] = useState(true);
 
   return (
     <div className="App">
-      <List />
+      <h2 className="add-margin">React Router</h2>
 
-      <div className='box-wrapper'>
-        <button onClick={() => setIsShow(!isShow)}>Toggle</button>
-        {isShow && <Box className='test' />}
-      </div>
+      <nav className="nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/articles">Articles</a>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import ListItem from './ListItem';
+import ListItem from '../components/ListItem';
 
 const url = 'https://jsonplaceholder.typicode.com/posts';
 
-const List = () => {
+const Articles = () => {
   const [items, setItems] = useState([]);
   const [error, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,4 +47,4 @@ const List = () => {
   )
 }
 
-export default List;
+export default Articles;
